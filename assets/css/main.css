@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+body {
+  font-family: "Poppins";
+}
+
+.navigation {
+  height: 70px;
+  background: #fff;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+.brand .fa {
+  margin-right: 5px;
+  font-size: medium;
+}
+.brand a,
+.brand a:visited {
+  color: #0c0c0c;
+  text-decoration: none;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a {
+  display: block;
+  padding: 10px 20px 0 20px;
+  line-height: 50px;
+  background: #fff;
+  color: #0c0c0c;
+  text-decoration: none;
+}
+nav ul li a::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #f8b500;
+  width: 0%;
+  bottom: 0px;
+}
+nav ul li a:hover::before {
+  width: 70%;
+}
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 770px) {
+  #note {
+    margin: 2px !important;
+  }
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li a:hover::before {
+    width: 20%;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #f8b500;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 770px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+.btn {
+  background: rgba(93, 235, 152, 0.7333333333) !important;
+  color: #fff;
+  margin: 10px;
+}
+.btn:hover {
+  background-color: #f8b500 !important;
+}
+
+#div1 {
+  margin-top: 3rem;
+}
+#div1 #ques {
+  text-align: center;
+  font-size: xx-large;
+}
+#div1 button {
+  font-size: large;
+  text-align: center;
+}
+
+#note {
+  margin-top: 10rem;
+}
+
+#res {
+  font-size: 26px;
+  font-weight: bolder;
+  margin-left: 45%;
+}
+
+#exp {
+  font-size: 26px;
+  font-weight: bolder;
+  margin-left: 3%;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: row !important;
+  margin: 40px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.progress-bar .step {
+  text-align: center;
+  width: 11rem;
+  position: relative;
+}
+.progress-bar .step .bullet {
+  height: 28px;
+  width: 28px;
+  border: 2px solid #757575;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active {
+  border-color: #f8b500;
+  background: #f8b500;
+}
+.progress-bar .step .bullet.active span {
+  display: none;
+}
+.progress-bar .step .bullet.active:after {
+  background: #f8b500;
+  transform: scaleX(0);
+  transform-origin: left;
+  -webkit-animation: animate 0.3s linear forwards;
+          animation: animate 0.3s linear forwards;
+}
+.progress-bar .step .bullet:before, .progress-bar .step .bullet::after {
+  position: absolute;
+  content: "";
+  bottom: 11px;
+  right: -150px;
+  height: 3px;
+  width: 148px;
+  background: #757575;
+}
+@media (max-width: 600px) {
+  .progress-bar .step .bullet:before, .progress-bar .step .bullet::after {
+    width: 0;
+  }
+}
+.progress-bar .step .bullet span {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step:last-child .bullet:before, .progress-bar .step:last-child .bullet::after {
+  display: none;
+}
+.progress-bar .step .check {
+  position: absolute;
+  left: 50%;
+  top: 73%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active {
+  display: block;
+  color: #fff;
+}
+.progress-bar p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progress-bar p.active {
+  color: #f8b500;
+  transition: 0.2s linear;
+  font-size: 19px;
+}
+
+@-webkit-keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.next {
+  display: none;
+}
+
+#file {
+  margin-top: 50px;
+  margin-left: 23%;
+  height: 20px;
+  width: 50%;
+  background: white;
+}
+#file::-webkit-progress-value {
+  background: #f8b500;
+}
+
+.answerText {
+  font-size: large;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.incorrect {
+  background: linear-gradient(45deg, rgba(244, 67, 54, 0.5568627451), transparent);
+}
+
+.correct {
+  background: linear-gradient(45deg, rgba(51, 200, 56, 0.4549019608), transparent);
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  font-weight: unset !important;
+}/*# sourceMappingURL=main.css.map */
