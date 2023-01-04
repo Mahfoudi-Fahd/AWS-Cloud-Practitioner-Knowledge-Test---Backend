@@ -95,6 +95,8 @@ submitBtn.addEventListener("click", function(){
 
 
 
+// ajax
+
 let questions=[];
 getData() ;
 function getData(){
@@ -103,7 +105,6 @@ function getData(){
     
     if (this.readyState == 4 && this.status == 200) {
       questions = JSON.parse(aj.responseText);
-      // console.log(questions);
       show()
     }
   }

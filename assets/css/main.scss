@@ -10,15 +10,17 @@ $link-hover-color: #f8b500;
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 body {
+  background: #0F222D !important;
   font-family: 'Poppins';
 }
 
 .navigation {
   height: $nav-height;
-  background: $nav-background;
+  background: none;
 }
 
 .nav-container {
+  background: none;
   max-width: $content-width;
   margin: 0 auto;
 }
@@ -46,6 +48,7 @@ body {
 }
 
 nav {
+  
   float: right;
 
   ul {
@@ -61,8 +64,8 @@ nav {
         display: block;
         padding: 10px 20px 0 20px;
         line-height: 50px;
-        background: $nav-background;
-        color: $nav-font-color;
+        background: none;
+        color: #EBE7D9 !important;
         text-decoration: none;
 
 
@@ -126,6 +129,7 @@ nav {
   }
 
   .nav-mobile {
+    background: none;
     display: block;
   }
 
@@ -144,6 +148,7 @@ nav {
           line-height: 20px;
 
           &:hover::before {
+          
             width: 20%;
           }
         }
@@ -161,6 +166,7 @@ nav {
 }
 
 #nav-toggle {
+
   position: absolute;
   left: 18px;
   top: 22px;
@@ -221,12 +227,14 @@ nav {
     background-color: $link-hover-color !important;
   }
 
-  background: #5deb98bb !important;
-  color: $nav-background;
+  background: #0F222D !important;
+  color: #EBE7D9 !important;
   margin:10px;
 }
 
 #div1 {
+  box-shadow: 1px 1px 14px #EBE7D9!important;
+  background: #EBE7D9 !important;
   margin-top: 3rem;
 
   #ques {
@@ -235,12 +243,16 @@ nav {
   }
 
   button {
+    background: #0F222D !important;
+    color: #EBE7D9;
     font-size: large;
     text-align: center;
   }
 }
 
 #note {
+  box-shadow: 1px 1px 14px #EBE7D9!important;
+  background: #EBE7D9 !important;
   margin-top: 10rem;
 }
 
@@ -313,7 +325,7 @@ nav {
 
       }
 
-      span {
+      span { color: #EBE7D9;
         position: absolute;
         bottom: 2%;
         left: 50%;
@@ -349,7 +361,7 @@ nav {
   p {
     font-weight: 500;
     font-size: 18px;
-    color: #000;
+    color: #EBE7D9;
     margin-bottom: 8px;
 
     &.active {

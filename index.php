@@ -34,7 +34,7 @@
         <div class="container">
             <div class="brand">
                 <!-- <a href="index.html"><i class="fa fa-amazon"></i>QUIZIZY</a> -->
-                <img src="assets/img/amazon.png" style="height: 5rem;" alt="amazon">
+                <img src="assets/img/logo.png" style="height: 5rem;" alt="logo">
             </div>
             <nav>
                 <div class="nav-mobile">
@@ -42,7 +42,7 @@
                 </div>
                 <ul class="nav-list">
                     <li><a href="pages/home.html">Home</a></li>
-                    <li><a href="index.html">Quiz</a></li>
+                    <li><a href="index.php">Quiz</a></li>
                     <li><a href="#!">About Us</a></li>
                     <li><a href="#!">Contact</a></li>
                 </ul>
@@ -109,7 +109,7 @@
         
         
         
-        <div id="page" class="res container col-md-6 shadow p-3 mb-5 bg-white rounded">
+        <div id="page" class="res container col-md-6 shadow p-3 mb-5 rounded">
             <h1>All Done !!!</h1>
             <h6>Your score is <span id="score"></span>/100</h6><br />
             <p>Click Submit To see the Questions's explication </p>
@@ -195,6 +195,9 @@
                 )
             }
         }
+
+
+
 function results(){
     
     
