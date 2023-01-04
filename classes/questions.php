@@ -7,7 +7,7 @@ class show extends DB{
     public function displayData()
     {
         try {
-            $query = "SELECT * FROM questions";
+            $query = "SELECT * FROM questions ORDER BY RAND() LIMIT 10";
             $stm = $this->pdo->prepare($query);
             $stm->execute();
             return $stm->fetchAll(PDO::FETCH_ASSOC);

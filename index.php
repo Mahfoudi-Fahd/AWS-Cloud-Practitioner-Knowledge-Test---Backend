@@ -122,54 +122,39 @@
         </div>
         <div id="results" class=""></div>
     </main>
-    <script src="Assets/JS/main.js"></script>
+    <!-- <script src="Assets/JS/main.js"></script> -->
     
     <script src="assets/JS/scripts.js"></script>
     <script>
         
         var i = 0;
         var score = 0;
-        
-        
-        // random questions function 
-        
-        function shuffle(questions) {
-            for (let i = questions.length - 1; i > 0; i--) {
-                let j = Math.floor(Math.random() * (i + 1));
-                let temp = questions[i];
-                questions[i] = questions[j];
-                questions[j] = temp;
-            }
-            return questions;
+
+        function show(){
+            let { question: q1 } = questions[i];
+             let s = JSON.parse(questions[i].options)
+
+                    document.getElementById("ques").innerHTML = q1;
+                    document.getElementById("op1").innerHTML = s.a;
+                    document.getElementById("op2").innerHTML = s.b;
+                    document.getElementById("op3").innerHTML = s.c;
+                    document.getElementById("op4").innerHTML = s.d;
+
         }
-        const result = shuffle(questions);
-
-
-
-
-        const { questionText: q1 } = questions[i];
-        const [op1, op2, op3, op4] = questions[i].options;
-        document.getElementById("ques").innerHTML = q1;
-        document.getElementById("op1").innerHTML = op1;
-        document.getElementById("op2").innerHTML = op2;
-        document.getElementById("op3").innerHTML = op3;
-        document.getElementById("op4").innerHTML = op4;
-
-
 
         function validate(id) {
 
             // progressbar
             document.querySelector('#file').value += 10;
-
-        
-
-            // answers
+            questionData = questions[i];
+            optionsData = JSON.parse(questionData.options);
+           
             $('#op1,#op2,#op3,#op4').attr('disabled', 'disabled');
+            
+            let a = optionsData[questionData['answer']];
 
-            const { answer: a } = questions[i];
+            var ans = document.getElementById(id).innerHTML
 
-            var ans = document.getElementById(id).innerHTML;
             if (ans === a) {
                 questions[i]["correct"]="true";
                 $("#res").text("Correct !!!");
@@ -204,14 +189,7 @@
                     $('#res').text("");
                     $('#exp').text("");
 
-                    const { questionText: q1 } = questions[i];
-                    const [op1, op2, op3, op4] = questions[i].options;
-                    document.getElementById("ques").innerHTML = q1;
-                    document.getElementById("op1").innerHTML = op1;
-                    document.getElementById("op2").innerHTML = op2;
-                    document.getElementById("op3").innerHTML = op3;
-                    document.getElementById("op4").innerHTML = op4;
-
+                    show();
 
                 }, 1000
                 )
@@ -219,14 +197,17 @@
         }
 function results(){
     
-for(let index=0 ; index < questions.length; index++){
-    if(questions[index]["incorrect"])
+    
+    for(let index=0 ; index < questions.length; index++){
+        questionData = questions[index];
+        optionsData = JSON.parse(questionData.options);
+        if(questions[index]["incorrect"])
 document.getElementById("results").innerHTML += 
 `<div id="result" class="incorrect container col-md-6 shadow p-3 mb-5  rounded">
         <div class="card-body text-center">
-             <h5> ${questions[index]["questionText"]}</h5>
+             <h5> ${questions[index]["question"]}</h5>
             <div class="answerText">
-                ${questions[index]["answer"]}
+                ${optionsData[questionData['answer']]}
                 </label>
             </div>
             <div class="">
@@ -240,9 +221,9 @@ document.getElementById("results").innerHTML +=
 document.getElementById("results").innerHTML += 
 `<div id="result" class="correct container col-md-6 shadow p-3 mb-5  rounded">
         <div class="card-body text-center">
-             <h5> ${questions[index]["questionText"]}</h5>
+             <h5> ${questions[index]["question"]}</h5>
             <div class="answerText">
-                ${questions[index]["answer"]}
+                ${optionsData[questionData['answer']]}
                 </label>
             </div>
             <div class="">
