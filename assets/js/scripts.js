@@ -91,3 +91,22 @@ submitBtn.addEventListener("click", function(){
   })
   
 })(jQuery)
+
+
+
+
+let questions=[];
+getData() ;
+function getData(){
+  let aj = new XMLHttpRequest();
+  aj.onreadystatechange = function() {
+    
+    if (this.readyState == 4 && this.status == 200) {
+      questions = JSON.parse(aj.responseText);
+      console.log(questions);
+    }
+  }
+  aj.open("POST","http://localhost/AWS-Cloud-Practitioner-Knowledge-Test---Backend/classes/questions.php", true);
+  aj.send();
+  
+}

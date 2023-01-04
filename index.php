@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,10 +49,10 @@
             </nav>
         </div>
     </section>
-
-
+    
+    
     <div class="progress-bar">
-
+        
         <div class="step">
             <p>Start</p>
             <div class="bullet">
@@ -57,7 +60,7 @@
             </div>
             <div class="check fas fa-check"></div>
         </div>
-
+        
         <div class="step">
             <p>Questions</p>
             <div class="bullet">
@@ -65,7 +68,7 @@
             </div>
             <div class="check fas fa-check"></div>
         </div>
-
+        
         <div class="step">
             <p>Results</p>
             <div class="bullet">
@@ -74,62 +77,62 @@
             <div class="check fas fa-check"></div>
         </div>
     </div>
-
+    
     <main>
-
+        
         <div class="form-outer">
             <div id="note" class="container col-md-6 shadow p-3 mb-5 bg-white rounded">
                 <h1>AWS Cloud Practitioner Knowledge Test</h1>
                 <h6>Try to answer the following questions in given time limit<br />
-                    Keep in mind that incorrect answer will penalize time/score
-                </h6>
-                <button type="button" id="start" class="btn">Start Quiz</button>
-            </div>
-            <div id="div1" class="container col-md-8 shadow p-3 mb-5 bg-white rounded">
-                <h1 id="ques">Question</h1>
-                <div id="res"></div>
-                <div id="exp"></div>
-
-                <button type="button" id="op1" class="btn col-md-12 col-sm-12 col-xs-12"
-                    onclick="validate(id);"></button>
-                <button type="button" id="op2" class="btn col-md-12 col-sm-12 col-xs-12"
-                    onclick="validate(id);"></button>
-                <button type="button" id="op3" class="btn col-md-12 col-sm-12 col-xs-12"
-                    onclick="validate(id);"></button>
-                <button type="button" id="op4" class="btn col-md-12 col-sm-12 col-xs-12"
-                    onclick="validate(id);"></button>
-                <button id="next-1" class="next-1 next">Next</button>
-                <progress class="progress" id="file" max="100" value="0"></progress>
-
-
-            </div>
-
-
-
-            <div id="page" class="res container col-md-6 shadow p-3 mb-5 bg-white rounded">
-                <h1>All Done !!!</h1>
-                <h6>Your score is <span id="score"></span>/100</h6><br />
-                <p>Click Submit To see the Questions's explication </p>
-                <button id="done" type="button" class="submit btn" onclick="results();">Submit</button>
-                <button type="button" class="btn" onclick="restart();">Go Back</button>
-            </div>
-            <div id="result-head" class="res container col-md-4 shadow p-3 mb-5  rounded">
-                <h3>answers & explications</h3>
-
-            </div>
-            <div id="results" class=""></div>
+                Keep in mind that incorrect answer will penalize time/score
+            </h6>
+            <button type="button" id="start" class="btn">Start Quiz</button>
+        </div>
+        <div id="div1" class="container col-md-8 shadow p-3 mb-5 bg-white rounded">
+            <h1 id="ques">Question</h1>
+            <div id="res"></div>
+            <div id="exp"></div>
+            
+            <button type="button" id="op1" class="btn col-md-12 col-sm-12 col-xs-12"
+            onclick="validate(id);"></button>
+            <button type="button" id="op2" class="btn col-md-12 col-sm-12 col-xs-12"
+            onclick="validate(id);"></button>
+            <button type="button" id="op3" class="btn col-md-12 col-sm-12 col-xs-12"
+            onclick="validate(id);"></button>
+            <button type="button" id="op4" class="btn col-md-12 col-sm-12 col-xs-12"
+            onclick="validate(id);"></button>
+            <button id="next-1" class="next-1 next">Next</button>
+            <progress class="progress" id="file" max="100" value="0"></progress>
+            
+            
+        </div>
+        
+        
+        
+        <div id="page" class="res container col-md-6 shadow p-3 mb-5 bg-white rounded">
+            <h1>All Done !!!</h1>
+            <h6>Your score is <span id="score"></span>/100</h6><br />
+            <p>Click Submit To see the Questions's explication </p>
+            <button id="done" type="button" class="submit btn" onclick="results();">Submit</button>
+            <button type="button" class="btn" onclick="restart();">Go Back</button>
+        </div>
+        <div id="result-head" class="res container col-md-4 shadow p-3 mb-5  rounded">
+            <h3>answers & explications</h3>
+            
+        </div>
+        <div id="results" class=""></div>
     </main>
     <script src="Assets/JS/main.js"></script>
-
+    
+    <script src="assets/JS/scripts.js"></script>
     <script>
-
-
+        
         var i = 0;
         var score = 0;
-
-
+        
+        
         // random questions function 
-
+        
         function shuffle(questions) {
             for (let i = questions.length - 1; i > 0; i--) {
                 let j = Math.floor(Math.random() * (i + 1));
@@ -262,7 +265,6 @@ document.getElementById("results").innerHTML +=
     </script>
 
 
-    <script src="assets/JS/scripts.js"></script>
 </body>
 
 </html>
