@@ -116,8 +116,8 @@
             <button id="done" type="button" class="submit btn" onclick="results();">Submit</button>
             <button type="button" class="btn" onclick="restart();">Go Back</button>
         </div>
-        <div id="result-head" class="res container col-md-4 shadow p-3 mb-5  rounded">
-            <h3>answers & explications</h3>
+        <div id="result-head" class="res container col-md-4  p-3 mb-5  rounded">
+            <h3>Answers & Explications</h3>
             
         </div>
         <div id="results" class=""></div>
@@ -157,8 +157,8 @@
 
             if (ans === a) {
                 questions[i]["correct"]="true";
-                $("#res").text("Correct !!!");
-                $("#res").css({ 'color': 'green' });
+                // $("#res").text("Correct !!!");
+                // $("#res").css({ 'color': 'green' });
 
                 score += 10;
 
@@ -166,8 +166,8 @@
             else {
                 questions[i]["incorrect"]="true";
 
-                $("#res").text("Incorrect ");
-                $("#res").css({ 'color': 'red' });
+                // $("#res").text("Incorrect ");
+                // $("#res").css({ 'color': 'red' });
 
 
 
@@ -191,7 +191,7 @@
 
                     show();
 
-                }, 1000
+                }, 10
                 )
             }
         }
@@ -207,13 +207,13 @@ function results(){
         if(questions[index]["incorrect"])
 document.getElementById("results").innerHTML += 
 `<div id="result" class="incorrect container col-md-6 shadow p-3 mb-5  rounded">
-        <div class="card-body text-center">
-             <h5> ${questions[index]["question"]}</h5>
-            <div class="answerText">
+        <div class="card-body fs-4">
+             <h5> ${questions[index]["question"]}</h5><hr>
+            <div class="answerText fs-5">
                 ${optionsData[questionData['answer']]}
                 </label>
             </div>
-            <div class="">
+            <div class="justif">
                 ${questions[index]["justification"]}
                 </label>
             </div>
@@ -223,13 +223,13 @@ document.getElementById("results").innerHTML +=
         if(questions[index]["correct"])
 document.getElementById("results").innerHTML += 
 `<div id="result" class="correct container col-md-6 shadow p-3 mb-5  rounded">
-        <div class="card-body text-center">
-             <h5> ${questions[index]["question"]}</h5>
+        <div class="card-body ">
+             <h5> ${questions[index]["question"]}</h5><hr>
             <div class="answerText">
                 ${optionsData[questionData['answer']]}
                 </label>
             </div>
-            <div class="">
+            <div class="justif">
                 ${questions[index]["justification"]}
                 </label>
             </div>

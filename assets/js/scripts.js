@@ -96,7 +96,6 @@ submitBtn.addEventListener("click", function(){
 
 
 // ajax
-
 let questions=[];
 getData() ;
 function getData(){
@@ -106,6 +105,7 @@ function getData(){
     if (this.readyState == 4 && this.status == 200) {
       questions = JSON.parse(aj.responseText);
       show()
+      console.log(questions);
     }
   }
   aj.open("POST","http://localhost/AWS-Cloud-Practitioner-Knowledge-Test---Backend/classes/questions.php", true);

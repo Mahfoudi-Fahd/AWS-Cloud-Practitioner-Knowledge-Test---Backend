@@ -227,32 +227,34 @@ nav {
     background-color: $link-hover-color !important;
   }
 
-  background: #0F222D !important;
-  color: #EBE7D9 !important;
+  background: #EBE7D9 !important;
+  color: #0F222D !important;
   margin:10px;
 }
 
 #div1 {
-  box-shadow: 1px 1px 14px #EBE7D9!important;
-  background: #EBE7D9 !important;
+  box-shadow: 0px 1px 7px #ebe7d970!important;
+  background: #0F222D !important;
   margin-top: 3rem;
 
   #ques {
+    color: #EBE7D9;
     text-align: center;
     font-size: xx-large;
   }
 
   button {
-    background: #0F222D !important;
-    color: #EBE7D9;
+    background:  #ebe7d9db !important;
+    color: #0F222D !important;
     font-size: large;
     text-align: center;
   }
 }
 
 #note {
-  box-shadow: 1px 1px 14px #EBE7D9!important;
-  background: #EBE7D9 !important;
+  box-shadow: 0px 1px 7px #ebe7d970!important;
+  background: #0F222D !important;
+  color: #EBE7D9;
   margin-top: 10rem;
 }
 
@@ -266,8 +268,10 @@ nav {
   font-weight: bolder;
   margin-left: 3%;
 }
-
-
+#page{
+  box-shadow: 0px 1px 7px #ebe7d970!important;
+  color: #EBE7D9 !important;
+}
 
 .progress-bar {
   display: flex;
@@ -398,10 +402,27 @@ margin-left: 23%;
   font-weight: bold;
   margin: 5px;
 }
-.incorrect{
-  background: linear-gradient(45deg, #f443368e, transparent);}
-.correct{
-  background: linear-gradient(45deg, #33c83874, transparent);
+.incorrect{ 
+  background:rgb(138 52 52 / 82%) !important;
+}
+
+.correct, .incorrect{
+  color: #EBE7D9;
+  background: #0a590a99;
+  .card-body{
+    h5{
+      color: #f8f8f8d9;
+    }
+    .answerText{
+      font-size: 16px !important;
+      color: #ddd;
+    }
+    .justif{
+      color: #b1b0b0;
+      font-size: 13px;
+    }
+
+  }
 }
 
 
@@ -409,4 +430,10 @@ h3{
   display: flex;
   justify-content: center;
   font-weight: unset !important;
+}
+#result-head{
+  color:#EBE7D9 !important;
+  background: #0F222D ;
+  box-shadow: 0px 1px 2px  #ebe7d970!important;
+
 }

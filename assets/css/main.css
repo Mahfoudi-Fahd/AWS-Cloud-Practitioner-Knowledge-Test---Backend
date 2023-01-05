@@ -171,8 +171,8 @@ nav ul li ul li a {
   }
 }
 .btn {
-  background: #0F222D !important;
-  color: #EBE7D9 !important;
+  background: #EBE7D9 !important;
+  color: #0F222D !important;
   margin: 10px;
 }
 .btn:hover {
@@ -180,24 +180,26 @@ nav ul li ul li a {
 }
 
 #div1 {
-  box-shadow: 1px 1px 14px #EBE7D9 !important;
-  background: #EBE7D9 !important;
+  box-shadow: 0px 1px 7px rgba(235, 231, 217, 0.4392156863) !important;
+  background: #0F222D !important;
   margin-top: 3rem;
 }
 #div1 #ques {
+  color: #EBE7D9;
   text-align: center;
   font-size: xx-large;
 }
 #div1 button {
-  background: #0F222D !important;
-  color: #EBE7D9;
+  background: rgba(235, 231, 217, 0.8588235294) !important;
+  color: #0F222D !important;
   font-size: large;
   text-align: center;
 }
 
 #note {
-  box-shadow: 1px 1px 14px #EBE7D9 !important;
-  background: #EBE7D9 !important;
+  box-shadow: 0px 1px 7px rgba(235, 231, 217, 0.4392156863) !important;
+  background: #0F222D !important;
+  color: #EBE7D9;
   margin-top: 10rem;
 }
 
@@ -211,6 +213,11 @@ nav ul li ul li a {
   font-size: 26px;
   font-weight: bolder;
   margin-left: 3%;
+}
+
+#page {
+  box-shadow: 0px 1px 7px rgba(235, 231, 217, 0.4392156863) !important;
+  color: #EBE7D9 !important;
 }
 
 .progress-bar {
@@ -334,15 +341,33 @@ nav ul li ul li a {
 }
 
 .incorrect {
-  background: linear-gradient(45deg, rgba(244, 67, 54, 0.5568627451), transparent);
+  background: rgba(138, 52, 52, 0.82) !important;
 }
 
-.correct {
-  background: linear-gradient(45deg, rgba(51, 200, 56, 0.4549019608), transparent);
+.correct, .incorrect {
+  color: #EBE7D9;
+  background: rgba(10, 89, 10, 0.6);
+}
+.correct .card-body h5, .incorrect .card-body h5 {
+  color: rgba(248, 248, 248, 0.8509803922);
+}
+.correct .card-body .answerText, .incorrect .card-body .answerText {
+  font-size: 16px !important;
+  color: #ddd;
+}
+.correct .card-body .justif, .incorrect .card-body .justif {
+  color: #b1b0b0;
+  font-size: 13px;
 }
 
 h3 {
   display: flex;
   justify-content: center;
   font-weight: unset !important;
+}
+
+#result-head {
+  color: #EBE7D9 !important;
+  background: #0F222D;
+  box-shadow: 0px 1px 2px rgba(235, 231, 217, 0.4392156863) !important;
 }/*# sourceMappingURL=main.css.map */
